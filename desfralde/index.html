@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Desfralde sem Trauma</title>
+<meta name="description" content="Kit visual para o desfralde: quadro de rotina, placas de banheiro, livrinho Tchau, Fraldinha! e 3 bônus. Por R$ 37.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: one mobile-first column of "pages" framed by the kit's own gingham border; the offer card repeats twice. */
+:root {
+  color-scheme: light;
+  --sky: #3f86d1;        /* gingham blue from the printed kit */
+  --sky-soft: #dcebfa;
+  --lime: #8cc63f;       /* "Tchau," title green */
+  --lime-deep: #5d8f1f;
+  --pink: #ef7fb0;       /* girl version */
+  --cream: #fffaf2;
+  --paper: #ffffff;
+  --ink: #23324a;
+  --ink-soft: #55627a;
+  --line: #e6ecf5;
+  --display: 'Baloo 2', 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --body: 'Nunito', 'Segoe UI', Helvetica, Arial, sans-serif;
+  --step-0: clamp(1rem, .96rem + .2vw, 1.08rem);
+  --step-1: clamp(1.2rem, 1.1rem + .5vw, 1.45rem);
+  --step-2: clamp(1.55rem, 1.3rem + 1.2vw, 2.1rem);
+  --step-3: clamp(2.1rem, 1.6rem + 2.6vw, 3.4rem);
+  --gingham: repeating-linear-gradient(0deg, rgba(63,134,209,.55) 0 12px, transparent 12px 24px),
+             repeating-linear-gradient(90deg, rgba(63,134,209,.55) 0 12px, rgba(63,134,209,.18) 12px 24px);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+body {
+  margin: 0; background: var(--cream); color: var(--ink);
+  font-family: var(--body); font-size: var(--step-0); line-height: 1.6;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--sky); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.1; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+
+.wrap { width: 100%; max-width: 1060px; margin-inline: auto; padding-inline: 20px; }
+section { padding-block: clamp(48px, 7vw, 88px); }
+.eyebrow {
+  font-family: var(--body); font-weight: 800; font-size: .78rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--sky);
+}
+.lede { color: var(--ink-soft); max-width: 62ch; }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+
+/* gingham strip, the kit's signature border */
+.gingham { height: 18px; background: var(--gingham); background-color: #fff; }
+
+/* buttons */
+.cta {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--lime); color: #fff; text-decoration: none;
+  font-family: var(--display); font-weight: 800; font-size: 1.2rem; letter-spacing: .01em;
+  padding: 16px 30px; border-radius: 999px; text-align: center;
+  box-shadow: 0 6px 0 var(--lime-deep);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.cta:hover { transform: translateY(2px); box-shadow: 0 4px 0 var(--lime-deep); }
+.cta:focus-visible { outline: 3px solid var(--sky); outline-offset: 4px; }
+.cta small { font-family: var(--body); font-weight: 700; font-size: .85rem; opacity: .95; }
+.reassure { font-size: .9rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.reassure span::before { content: "✓ "; color: var(--lime-deep); font-weight: 800; }
+
+/* hero */
+.hero { background: var(--paper); padding-block: clamp(36px, 6vw, 72px); }
+.hero-grid { display: grid; gap: 32px; align-items: center; }
+@media (min-width: 860px) { .hero-grid { grid-template-columns: 1.05fr 1fr; } }
+.hero h1 { font-size: var(--step-3); font-weight: 800; color: var(--ink); }
+.hero h1 .tchau { color: var(--lime); }
+.hero h1 .fralda { color: var(--sky); }
+.hero .lede { font-size: var(--step-1); line-height: 1.45; }
+.byline { display: flex; align-items: center; gap: 12px; font-size: .95rem; color: var(--ink-soft); }
+.byline b { color: var(--ink); }
+.badge-nurse {
+  display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--sky-soft); color: var(--sky); font-family: var(--display); font-weight: 800; font-size: 1.1rem;
+}
+
+/* pain */
+.pain { background: var(--sky-soft); }
+.pain-grid { display: grid; gap: 28px; align-items: center; }
+@media (min-width: 860px) { .pain-grid { grid-template-columns: 1.3fr .7fr; } }
+.pain h2 { font-size: var(--step-2); }
+.pain ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.pain li {
+  background: var(--paper); border-radius: 16px; padding: 14px 18px; font-weight: 600;
+  border: 2px solid #c8ddf3;
+}
+.pain .photo { border-radius: 24px; overflow: hidden; border: 10px solid #fff; box-shadow: 0 10px 30px rgba(35,50,74,.12); max-width: 360px; justify-self: center; }
+.pain .relief { margin-top: 22px; font-family: var(--display); font-size: var(--step-1); color: var(--sky); font-weight: 700; }
+
+/* why visual */
+.why h2 { font-size: var(--step-2); }
+.why-grid { display: grid; gap: 18px; margin-top: 28px; }
+@media (min-width: 720px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+.why-item { display: grid; grid-template-columns: 48px 1fr; gap: 14px; align-items: start; }
+.why-item .icon {
+  width: 48px; height: 48px; border-radius: 14px; background: var(--paper); border: 2px solid var(--line);
+  display: grid; place-items: center; font-size: 1.5rem;
+}
+.why-item h3 { font-size: 1.15rem; margin-bottom: 4px; }
+.why-item p { color: var(--ink-soft); font-size: .98rem; }
+
+/* kit contents */
+.kit { background: var(--paper); }
+.kit h2 { font-size: var(--step-2); }
+.items { display: grid; gap: 22px; margin-top: 32px; }
+.item {
+  display: grid; gap: 18px; align-items: center;
+  border: 2px solid var(--line); border-radius: 22px; padding: 20px;
+}
+@media (min-width: 720px) { .item { grid-template-columns: 240px 1fr; padding: 24px 28px; } }
+.item .pic { background: var(--cream); border-radius: 16px; padding: 12px; }
+.item h3 { font-size: var(--step-1); }
+.item .tag { font-weight: 800; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--lime-deep); }
+.item ul { margin: 8px 0 0; padding-left: 1.1em; color: var(--ink-soft); }
+.item ul li { margin-bottom: 2px; }
+.item p { color: var(--ink-soft); margin-top: 6px; }
+
+.bonus-head { margin-top: 56px; display: flex; flex-direction: column; gap: 8px; }
+.bonus-head h2 { font-size: var(--step-2); }
+.bonuses { display: grid; gap: 18px; margin-top: 24px; }
+@media (min-width: 720px) { .bonuses { grid-template-columns: repeat(3, 1fr); } }
+.bonus {
+  background: var(--cream); border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 10px;
+  border: 2px dashed #f2b7cf;
+}
+.bonus img { height: 130px; width: auto; object-fit: contain; align-self: center; }
+.bonus .tag { font-weight: 800; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pink); }
+.bonus h3 { font-size: 1.2rem; }
+.bonus p { color: var(--ink-soft); font-size: .95rem; }
+
+/* compare */
+.compare h2 { font-size: var(--step-2); text-align: center; }
+.cols { display: grid; gap: 18px; margin-top: 28px; }
+@media (min-width: 720px) { .cols { grid-template-columns: 1fr 1fr; } }
+.col { border-radius: 22px; padding: 24px; background: var(--paper); border: 2px solid var(--line); }
+.col.good { border-color: var(--lime); }
+.col h3 { font-size: 1.25rem; margin-bottom: 12px; }
+.col.good h3 { color: var(--lime-deep); }
+.col.bad h3 { color: var(--ink-soft); }
+.col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.col li { padding-left: 30px; position: relative; }
+.col.good li::before { content: "✓"; position: absolute; left: 0; color: var(--lime-deep); font-weight: 800; }
+.col.bad li::before { content: "✕"; position: absolute; left: 2px; color: #c7a3a3; font-weight: 800; }
+.col.bad li { color: var(--ink-soft); }
+
+/* offer card */
+.offer { background: var(--sky); }
+.offer-card {
+  background: var(--paper); border-radius: 28px; padding: clamp(24px, 4vw, 44px);
+  display: grid; gap: 26px; align-items: center; max-width: 920px; margin-inline: auto;
+  box-shadow: 0 18px 50px rgba(20,40,80,.25);
+}
+@media (min-width: 820px) { .offer-card { grid-template-columns: 1fr 1fr; } }
+.offer-card h2 { font-size: var(--step-2); }
+.receipt { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 8px; }
+.receipt li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed var(--line); padding-bottom: 8px; font-weight: 600; }
+.receipt li span:last-child { color: var(--lime-deep); font-weight: 800; white-space: nowrap; }
+.price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.price .big { font-family: var(--display); font-weight: 800; font-size: clamp(3rem, 2.2rem + 4vw, 4.6rem); color: var(--ink); line-height: 1; font-variant-numeric: tabular-nums; }
+.price .note { color: var(--ink-soft); font-weight: 700; }
+.compare-price { color: var(--ink-soft); font-size: .98rem; }
+
+/* guarantee */
+.guarantee { display: grid; gap: 22px; align-items: center; }
+@media (min-width: 720px) { .guarantee { grid-template-columns: 150px 1fr; } }
+.seal {
+  width: 150px; height: 150px; border-radius: 50%; justify-self: center;
+  background: var(--lime); color: #fff; display: grid; place-items: center; text-align: center;
+  font-family: var(--display); font-weight: 800; line-height: 1; box-shadow: inset 0 0 0 8px #fff, 0 0 0 4px var(--lime);
+}
+.seal b { display: block; font-size: 3rem; }
+.seal small { font-size: .95rem; }
+.guarantee h2 { font-size: var(--step-2); }
+.guarantee p { color: var(--ink-soft); margin-top: 8px; max-width: 60ch; }
+
+/* author */
+.author { background: var(--paper); }
+.author-card { display: grid; gap: 18px; max-width: 760px; margin-inline: auto; text-align: left; }
+.author-card h2 { font-size: var(--step-2); }
+.author-card p { color: var(--ink-soft); }
+
+/* faq */
+.faq h2 { font-size: var(--step-2); text-align: center; margin-bottom: 26px; }
+.faq-list { max-width: 760px; margin-inline: auto; display: grid; gap: 12px; }
+details { background: var(--paper); border: 2px solid var(--line); border-radius: 18px; padding: 16px 20px; }
+details[open] { border-color: #c8ddf3; }
+summary { cursor: pointer; font-weight: 800; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-family: var(--display); font-size: 1.4rem; line-height: 1; color: var(--sky); }
+details[open] summary::after { content: "–"; }
+summary:focus-visible { outline: 3px solid var(--sky); outline-offset: 4px; border-radius: 8px; }
+details p { margin-top: 10px; color: var(--ink-soft); }
+
+/* closing */
+.closing { text-align: center; }
+.closing h2 { font-size: var(--step-2); max-width: 22ch; margin-inline: auto; }
+.closing p { color: var(--ink-soft); max-width: 56ch; margin: 14px auto 26px; }
+
+footer { background: var(--ink); color: #c9d3e3; padding-block: 34px; font-size: .85rem; }
+footer .wrap { display: grid; gap: 8px; text-align: center; }
+footer a { color: #fff; }
+
+/* sticky mobile bar */
+.bar {
+  position: fixed; inset: auto 0 0 0; z-index: 10; background: var(--paper);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -6px 20px rgba(35,50,74,.12); display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.bar .cta { padding: 12px 22px; font-size: 1.05rem; box-shadow: 0 4px 0 var(--lime-deep); }
+.bar .p { font-family: var(--display); font-weight: 800; font-size: 1.4rem; line-height: 1; }
+.bar .p small { display: block; font-family: var(--body); font-size: .75rem; font-weight: 700; color: var(--ink-soft); }
+@media (min-width: 860px) { .bar { display: none; } }
+@media (max-width: 859px) { body { padding-bottom: 76px; } }
+</style>
+</head>
+<body>
+
+<div class="gingham" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="stack" style="gap:22px">
+      <span class="eyebrow">Kit Desfralde sem Trauma</span>
+      <h1><span class="tchau">Tchau,</span> <span class="fralda">fraldinha!</span><br>Um desfralde leve, no tempo do seu filho.</h1>
+      <p class="lede">Quadro de rotina, placas de banheiro e um livrinho ilustrado que ajudam a criança a entender cada passo, com menos choro e menos briga para todo mundo.</p>
+      <div class="stack" style="gap:12px">
+        <a class="cta" href="https://pay.kiwify.com.br/oKHN90K" target="_blank" rel="noopener">Quero o kit por R$ 37</a>
+        <div class="reassure"><span>Acesso imediato</span><span>Imprima em casa</span><span>Garantia de 7 dias</span></div>
+      </div>
+      <div class="byline"><span class="badge-nurse" aria-hidden="true">R</span><span>Kit entregue por <b>Enfermeira Regina</b>, enfermeira e professora, que ajuda famílias a cuidar dos pequenos com segurança.</span></div>
+    </div>
+    <img src="img/kit.webp" alt="Os materiais do kit: quadros de rotina azul e lilás, placas do banheiro 'De quem é a vez?' e o livrinho Tchau, Fraldinha!" width="710" height="483">
+  </div>
+</header>
+
+<div class="gingham" aria-hidden="true"></div>
+
+<section class="pain">
+  <div class="wrap pain-grid">
+    <div>
+      <span class="eyebrow">Você se reconhece aqui?</span>
+      <h2 style="margin:10px 0 22px">Quando o desfralde vira uma batalha</h2>
+      <ul>
+        <li>Você tentou tirar a fralda e só vieram choro, birra e xixi pela casa toda.</li>
+        <li>Seu filho tem medo do vaso e não quer nem chegar perto.</li>
+        <li>Ele avisa que fez xixi, mas só depois que já fez.</li>
+        <li>A escola está cobrando e você não sabe por onde começar.</li>
+        <li>Todo mundo dá palpite, e nada parece funcionar com o seu filho.</li>
+      </ul>
+      <p class="relief">Respira. O problema não é o seu filho, e não é você.</p>
+      <p class="lede" style="margin-top:8px">Crianças pequenas entendem melhor o que conseguem ver. Quando o desfralde vira uma rotina visual, previsível e com pequenas comemorações, a criança passa a participar em vez de resistir.</p>
+    </div>
+    <img class="photo" src="img/crianca.webp" alt="Menino em frente ao vaso sanitário mostrando a placa do banheiro colada na parede" width="489" height="654">
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <span class="eyebrow">Por que o método visual ajuda</span>
+    <h2 style="margin-top:10px">A criança vê o que vai acontecer, e o medo diminui</h2>
+    <div class="why-grid">
+      <div class="why-item"><div class="icon" aria-hidden="true">👀</div><div><h3>Ela enxerga cada passo</h3><p>O quadro mostra na altura dos olhos o que fazer: pedir, sentar, fazer, limpar, dar descarga e lavar as mãos.</p></div></div>
+      <div class="why-item"><div class="icon" aria-hidden="true">🗓️</div><div><h3>Rotina traz segurança</h3><p>Saber o que vem depois deixa a criança mais tranquila e mais disposta a tentar.</p></div></div>
+      <div class="why-item"><div class="icon" aria-hidden="true">⭐</div><div><h3>Cada conquista é comemorada</h3><p>Marcar o quadro transforma o esforço em algo que a criança tem orgulho de mostrar.</p></div></div>
+      <div class="why-item"><div class="icon" aria-hidden="true">📖</div><div><h3>A história tira o medo</h3><p>Ler o livrinho junto prepara a criança antes mesmo de tirar a fralda.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="kit" id="kit">
+  <div class="wrap">
+    <span class="eyebrow">O que você recebe</span>
+    <h2 style="margin-top:10px">Tudo pronto para imprimir e começar ainda esta semana</h2>
+    <div class="items">
+      <article class="item">
+        <div class="pic"><img src="img/quadros.webp" alt="Quadro de rotina do desfralde nas versões menina e menino" width="400" height="300" loading="lazy"></div>
+        <div>
+          <span class="tag">O coração do kit</span>
+          <h3>Quadro de Rotina do Desfralde</h3>
+          <p>Um quadro semanal, de segunda a domingo, com todas as etapas do banheiro:</p>
+          <ul>
+            <li>Pedir para ir ao banheiro</li>
+            <li>Xixi e cocô no vaso</li>
+            <li>Limpar, dar descarga e lavar as mãos</li>
+          </ul>
+          <p>Versão menino (azul) e versão menina (lilás e rosa).</p>
+        </div>
+      </article>
+      <article class="item">
+        <div class="pic"><img src="img/placa.png" alt="Placa do banheiro De quem é a vez? com xixi e cocô ilustrados" width="400" height="300" loading="lazy"></div>
+        <div>
+          <span class="tag">Para a porta do banheiro</span>
+          <h3>Placa “De quem é a vez?”</h3>
+          <p>Uma placa divertida em que a criança escolhe se é a vez do xixi ou do cocô. Ajuda a transformar o banheiro em um lugar amigo. Versões menino e menina.</p>
+        </div>
+      </article>
+      <article class="item">
+        <div class="pic"><img src="img/livrinho.webp" alt="Capa do livrinho Tchau, Fraldinha!" width="400" height="300" loading="lazy"></div>
+        <div>
+          <span class="tag">Para ler juntos</span>
+          <h3>Livrinho “Tchau, Fraldinha!”</h3>
+          <p>Uma história ilustrada de 15 páginas para ler com seu filho antes e durante o desfralde. Ela apresenta o vaso de um jeito leve e ajuda a criança a se despedir da fralda.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="bonus-head">
+      <span class="eyebrow" style="color:var(--pink)">De presente</span>
+      <h2>3 bônus para facilitar a sua rotina</h2>
+    </div>
+    <div class="bonuses">
+      <article class="bonus">
+        <img src="img/bonus1.webp" alt="" width="260" height="260" loading="lazy">
+        <span class="tag">Bônus 1</span>
+        <h3>Checklist “Mochila do Desfralde”</h3>
+        <p>O que levar em passeios e para a escola, e o que combinar com a professora.</p>
+      </article>
+      <article class="bonus">
+        <img src="img/bonus2.webp" alt="" width="340" height="200" loading="lazy">
+        <span class="tag">Bônus 2</span>
+        <h3>Planner “30 Dias de Desfralde”</h3>
+        <p>Acompanhe as conquistas dia a dia, com um caminho sugerido em 4 semanas.</p>
+      </article>
+      <article class="bonus">
+        <img src="img/bonus3.webp" alt="" width="380" height="300" loading="lazy">
+        <span class="tag">Bônus 3</span>
+        <h3>Checklist “Preparando a Casa”</h3>
+        <p>O que comprar e organizar antes do primeiro dia, e os sinais de que seu filho está pronto.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="compare">
+  <div class="wrap">
+    <h2>Dois jeitos de tirar a fralda</h2>
+    <div class="cols">
+      <div class="col good">
+        <h3>Com o kit Desfralde sem Trauma</h3>
+        <ul>
+          <li>Transição gradual e respeitosa</li>
+          <li>Quadro que mostra exatamente o que fazer</li>
+          <li>Personagens fofos que ajudam a perder o medo</li>
+          <li>A criança aprende a pedir</li>
+          <li>Pequenas conquistas comemoradas todo dia</li>
+          <li>A criança quer participar da “brincadeira”</li>
+        </ul>
+      </div>
+      <div class="col bad">
+        <h3>No improviso</h3>
+        <ul>
+          <li>Tirar a fralda de uma vez, “na marra”</li>
+          <li>A criança não entende o que esperam dela</li>
+          <li>Medo do vaso sanitário</li>
+          <li>Você perguntando “quer fazer xixi?” toda hora</li>
+          <li>Frustração a cada escape</li>
+          <li>Choro dos dois lados</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gingham" aria-hidden="true"></div>
+
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <div class="offer-card">
+      <div>
+        <span class="eyebrow">Kit completo + 3 bônus</span>
+        <h2 style="margin-top:8px">Tudo o que você recebe hoje</h2>
+        <ul class="receipt">
+          <li><span>Quadro de Rotina (menino e menina)</span><span>incluso</span></li>
+          <li><span>Placa “De quem é a vez?” (menino e menina)</span><span>incluso</span></li>
+          <li><span>Livrinho “Tchau, Fraldinha!”</span><span>incluso</span></li>
+          <li><span>Bônus 1: Mochila do Desfralde</span><span>presente</span></li>
+          <li><span>Bônus 2: Planner 30 Dias</span><span>presente</span></li>
+          <li><span>Bônus 3: Preparando a Casa</span><span>presente</span></li>
+        </ul>
+      </div>
+      <div class="stack" style="gap:18px">
+        <div class="price"><span class="big">R$ 37</span><span class="note">pagamento único</span></div>
+        <p class="compare-price">Menos do que um pacote de fraldas. Você paga uma vez e pode imprimir quantas vezes precisar.</p>
+        <a class="cta" href="https://pay.kiwify.com.br/oKHN90K" target="_blank" rel="noopener">Quero desfraldar com leveza</a>
+        <div class="reassure"><span>Pix ou cartão</span><span>Acesso imediato por e-mail</span><span>Arquivos em PDF</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap guarantee">
+    <div class="seal" aria-hidden="true"><div><b>7</b><small>dias de<br>garantia</small></div></div>
+    <div>
+      <h2>Garantia de 7 dias</h2>
+      <p>Baixe o kit, imprima e use com o seu filho. Se em até 7 dias você sentir que o material não é para vocês, é só pedir o reembolso pela própria plataforma e devolvemos 100% do valor.</p>
+    </div>
+  </div>
+</section>
+
+<section class="author">
+  <div class="wrap author-card">
+    <span class="eyebrow">Quem entrega este kit</span>
+    <h2>Oi, eu sou a Enfermeira Regina</h2>
+    <p>Sou enfermeira e professora, e meu trabalho é ajudar mães e pais, principalmente os de primeira viagem, a cuidar dos pequenos com mais segurança e confiança.</p>
+    <p>Escolhi este kit porque ele faz do desfralde um momento de parceria entre você e seu filho, sem pressa e sem comparações. E, como enfermeira, deixei uma orientação clara dentro do material: em caso de dor, prisão de ventre ou qualquer dúvida sobre o desenvolvimento, o pediatra é sempre o seu melhor aliado.</p>
+    <p>Fale comigo no Instagram: <a href="https://www.instagram.com/protocolorn/" target="_blank" rel="noopener">@protocolorn</a></p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-list">
+      <details><summary>Para qual idade o kit é indicado?</summary><p>Para crianças de 18 meses a 4 anos. A maioria fica pronta entre 2 e 3 anos, mas cada criança tem o seu tempo. O Bônus 3 traz os sinais de prontidão para você observar.</p></details>
+      <details><summary>Serve para crianças com atraso no desenvolvimento?</summary><p>Rotinas visuais costumam ajudar muitas crianças, porque deixam o processo previsível. Converse com o pediatra ou com a equipe que acompanha seu filho sobre o melhor momento para começar.</p></details>
+      <details><summary>Meu filho tem medo do vaso. Funciona?</summary><p>O kit foi pensado para isso. A placa “De quem é a vez?” e o livrinho “Tchau, Fraldinha!” apresentam o banheiro de forma lúdica e aos poucos.</p></details>
+      <details><summary>Tem versão para menino e para menina?</summary><p>Sim. O quadro e a placa vêm nas duas versões. Se você tem mais de um filho, pode imprimir para todos.</p></details>
+      <details><summary>Preciso de gráfica para imprimir?</summary><p>Não. Os arquivos são PDF e podem ser impressos em casa, em papel comum. Se quiser mais durabilidade, use papel fotográfico ou plastifique.</p></details>
+      <details><summary>Como recebo o material?</summary><p>Logo após a confirmação do pagamento você recebe por e-mail o acesso à área de membros, onde estão todos os arquivos para baixar.</p></details>
+      <details><summary>O kit substitui a orientação do pediatra?</summary><p>Não. É um material educativo de apoio aos pais. Em caso de dor ao urinar ou evacuar, prisão de ventre, sangue na urina ou nas fezes, ou qualquer dúvida sobre o desenvolvimento, procure o pediatra.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>Que tal dar tchau para a fralda com mais calma?</h2>
+    <p>Imprima hoje, leia o livrinho com seu filho e comecem juntos, no tempo dele.</p>
+    <a class="cta" href="https://pay.kiwify.com.br/oKHN90K" target="_blank" rel="noopener">Quero o kit por R$ 37</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Desfralde sem Trauma · Kit Tchau, Fraldinha! · Enfermeira Regina</p>
+    <p>Material educativo digital. Não substitui consulta ou orientação de profissionais de saúde.</p>
+    <p>Pagamento processado com segurança pela Kiwify.</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <div class="p">R$ 37<small>kit + 3 bônus</small></div>
+  <a class="cta" href="https://pay.kiwify.com.br/oKHN90K" target="_blank" rel="noopener">Quero o kit</a>
+</div>
+
+</body>
+</html>

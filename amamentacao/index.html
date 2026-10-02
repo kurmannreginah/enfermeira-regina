@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amamentação com Leveza</title>
+<meta name="description" content="Curso em vídeo sobre pega correta, cuidados com as mamas, apojadura e rotina de amamentação, com guia de apoio em PDF. Por R$ 37.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+<style>
+/* Layout: a calm editorial column; a "first days" timeline carries the course modules in the order a mother lives them. */
+:root {
+  color-scheme: light;
+  --sage: #5f8f80;        /* line-art green from the course cover */
+  --sage-deep: #3f6b5e;
+  --sage-mist: #e4efe9;
+  --peach: #f3c9a8;       /* watercolour peach from the cover */
+  --peach-soft: #fbeee2;
+  --linen: #fdfaf6;
+  --paper: #ffffff;
+  --ink: #2f3a36;
+  --ink-soft: #5d6a65;
+  --line: #e8e1d8;
+  --display: 'Lora', Georgia, 'Times New Roman', serif;
+  --body: 'Nunito Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+  --step-0: clamp(1rem, .96rem + .2vw, 1.08rem);
+  --step-1: clamp(1.2rem, 1.1rem + .5vw, 1.4rem);
+  --step-2: clamp(1.6rem, 1.3rem + 1.3vw, 2.2rem);
+  --step-3: clamp(2.1rem, 1.6rem + 2.6vw, 3.3rem);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { margin: 0; background: var(--linen); color: var(--ink); font-family: var(--body); font-size: var(--step-0); line-height: 1.65; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--sage-deep); }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.wrap { width: 100%; max-width: 1080px; margin-inline: auto; padding-inline: 20px; }
+.narrow { max-width: 760px; }
+section { padding-block: clamp(52px, 7vw, 92px); }
+.eyebrow { font-weight: 800; font-size: .76rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sage); }
+.lede { color: var(--ink-soft); max-width: 60ch; }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+
+.cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--sage-deep); color: #fff; text-decoration: none;
+  font-weight: 800; font-size: 1.08rem; letter-spacing: .01em;
+  padding: 17px 32px; border-radius: 999px; text-align: center;
+  transition: background .15s ease, transform .15s ease;
+}
+.cta:hover { background: #2f574b; transform: translateY(-1px); }
+.cta:focus-visible { outline: 3px solid var(--peach); outline-offset: 4px; }
+.reassure { font-size: .9rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.reassure span::before { content: "✓ "; color: var(--sage); font-weight: 800; }
+
+/* hero */
+.hero { position: relative; background: var(--paper); padding-block: 0; overflow: hidden; }
+.hero-grid { display: grid; align-items: center; }
+@media (min-width: 900px) { .hero-grid { grid-template-columns: 1fr 1fr; min-height: 560px; } }
+.hero-text { padding-block: clamp(36px, 6vw, 72px); display: flex; flex-direction: column; gap: 22px; }
+.hero h1 { font-size: var(--step-3); }
+.hero h1 em { font-style: italic; color: var(--sage-deep); font-weight: 500; }
+.hero .lede { font-size: var(--step-1); line-height: 1.5; }
+.hero-photo { height: 100%; min-height: 300px; background: url("img/hero.jpg") 72% center / cover no-repeat; }
+@media (min-width: 900px) { .hero-photo { position: absolute; inset: 0 0 0 50%; } }
+.byline { font-size: .95rem; color: var(--ink-soft); border-left: 3px solid var(--peach); padding-left: 14px; }
+.byline b { color: var(--ink); }
+
+/* pain */
+.pain { background: var(--peach-soft); }
+.pain h2 { font-size: var(--step-2); margin: 10px 0 24px; }
+.quotes { display: grid; gap: 14px; }
+@media (min-width: 760px) { .quotes { grid-template-columns: 1fr 1fr; } }
+.quote {
+  background: var(--paper); border-radius: 18px; padding: 18px 20px;
+  font-family: var(--display); font-style: italic; font-size: 1.08rem; color: var(--ink);
+}
+.pain .turn { margin-top: 28px; font-family: var(--display); font-size: var(--step-1); color: var(--sage-deep); }
+.pain .turn + p { margin-top: 8px; }
+
+/* timeline */
+.journey h2 { font-size: var(--step-2); margin-top: 10px; }
+.timeline { list-style: none; padding: 0; margin: 36px 0 0; position: relative; display: grid; gap: 0; }
+.timeline::before { content: ""; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 2px; background: var(--sage-mist); }
+.step { display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding-bottom: 26px; position: relative; }
+.step:last-child { padding-bottom: 0; }
+.dot {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--paper); border: 2px solid var(--sage);
+  display: grid; place-items: center; font-family: var(--display); font-weight: 700; color: var(--sage-deep); z-index: 1;
+  font-variant-numeric: tabular-nums;
+}
+.step .when { font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--sage); }
+.step h3 { font-size: 1.25rem; margin: 2px 0 4px; }
+.step p { color: var(--ink-soft); }
+
+/* includes */
+.includes { background: var(--paper); }
+.inc-grid { display: grid; gap: 22px; align-items: center; }
+@media (min-width: 820px) { .inc-grid { grid-template-columns: 300px 1fr; gap: 48px; } }
+.inc-grid img { border-radius: 14px; box-shadow: 0 14px 40px rgba(47,58,54,.14); justify-self: center; max-width: 280px; }
+.includes h2 { font-size: var(--step-2); }
+.includes ul { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 12px; }
+.includes li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; }
+.includes li::before { content: "✓"; color: var(--sage); font-weight: 800; font-size: 1.1rem; }
+.includes li b { display: block; }
+.includes li span { color: var(--ink-soft); }
+
+/* when to seek help */
+.help .card {
+  background: var(--sage-mist); border-radius: 22px; padding: clamp(24px, 4vw, 40px);
+  display: grid; gap: 14px;
+}
+.help h2 { font-size: var(--step-2); }
+.help ul { margin: 0; padding-left: 1.2em; color: var(--ink); display: grid; gap: 6px; }
+
+/* offer */
+.offer { background: var(--sage-deep); color: #fff; }
+.offer-card {
+  background: var(--paper); color: var(--ink); border-radius: 26px; padding: clamp(26px, 4vw, 46px);
+  display: grid; gap: 28px; max-width: 920px; margin-inline: auto;
+}
+@media (min-width: 820px) { .offer-card { grid-template-columns: 1.1fr .9fr; align-items: center; } }
+.offer-card h2 { font-size: var(--step-2); }
+.receipt { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 9px; }
+.receipt li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed var(--line); padding-bottom: 9px; }
+.receipt li span:last-child { color: var(--sage-deep); font-weight: 800; white-space: nowrap; }
+.price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.price .big { font-family: var(--display); font-weight: 700; font-size: clamp(3rem, 2.3rem + 3.6vw, 4.4rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.price .note { color: var(--ink-soft); font-weight: 700; }
+
+/* guarantee + author */
+.guarantee { display: grid; gap: 22px; align-items: center; }
+@media (min-width: 720px) { .guarantee { grid-template-columns: 140px 1fr; } }
+.seal {
+  width: 140px; height: 140px; border-radius: 50%; justify-self: center; display: grid; place-items: center; text-align: center;
+  border: 2px solid var(--sage); color: var(--sage-deep); font-family: var(--display); line-height: 1.05;
+  box-shadow: inset 0 0 0 7px var(--linen), inset 0 0 0 9px var(--peach);
+}
+.seal b { display: block; font-size: 2.8rem; }
+.seal small { font-family: var(--body); font-weight: 700; font-size: .85rem; }
+.guarantee h2 { font-size: var(--step-2); }
+.guarantee p { color: var(--ink-soft); margin-top: 8px; max-width: 60ch; }
+
+.author { background: var(--paper); }
+.author-grid { display: grid; gap: 28px; align-items: center; }
+@media (min-width: 820px) { .author-grid { grid-template-columns: .9fr 1.1fr; gap: 48px; } }
+.author-grid img { border-radius: 22px; }
+.author h2 { font-size: var(--step-2); }
+.author p { color: var(--ink-soft); }
+
+/* faq */
+.faq h2 { font-size: var(--step-2); text-align: center; margin-bottom: 26px; }
+.faq-list { max-width: 760px; margin-inline: auto; display: grid; gap: 10px; }
+details { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 16px 20px; }
+details[open] { border-color: #bcd3ca; }
+summary { cursor: pointer; font-weight: 800; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-family: var(--display); font-size: 1.4rem; line-height: 1; color: var(--sage); }
+details[open] summary::after { content: "–"; }
+summary:focus-visible { outline: 3px solid var(--peach); outline-offset: 4px; border-radius: 8px; }
+details p { margin-top: 10px; color: var(--ink-soft); }
+
+.closing { text-align: center; background: var(--peach-soft); }
+.closing h2 { font-size: var(--step-2); max-width: 22ch; margin-inline: auto; }
+.closing p { color: var(--ink-soft); max-width: 54ch; margin: 14px auto 26px; }
+
+footer { background: var(--ink); color: #c9d2ce; padding-block: 34px; font-size: .85rem; }
+footer .wrap { display: grid; gap: 8px; text-align: center; }
+
+.bar {
+  position: fixed; inset: auto 0 0 0; z-index: 10; background: var(--paper);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -6px 20px rgba(47,58,54,.12); display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.bar .cta { padding: 12px 22px; font-size: 1rem; }
+.bar .p { font-family: var(--display); font-weight: 700; font-size: 1.4rem; line-height: 1; }
+.bar .p small { display: block; font-family: var(--body); font-size: .75rem; font-weight: 700; color: var(--ink-soft); }
+@media (min-width: 900px) { .bar { display: none; } }
+@media (max-width: 899px) { body { padding-bottom: 76px; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">Curso em vídeo · Amamentação</span>
+      <h1>Amamentação <em>com leveza</em>, desde a primeira mamada</h1>
+      <p class="lede">Aprenda a pega correta, como cuidar das mamas, o que fazer na apojadura e como montar uma rotina que funcione para você e seu bebê.</p>
+      <div class="stack" style="gap:12px">
+        <a class="cta" href="https://pay.kiwify.com.br/0LrTQhB" target="_blank" rel="noopener">Quero o curso por R$ 37</a>
+        <div class="reassure"><span>Aulas curtas em vídeo</span><span>Guia de apoio em PDF</span><span>Garantia de 7 dias</span></div>
+      </div>
+      <p class="byline">Curso selecionado e acompanhado pela <b>Enfermeira Regina</b>, enfermeira e professora, que ajuda mães de primeira viagem a cuidar do recém-nascido com segurança.</p>
+    </div>
+  </div>
+  <div class="hero-photo" role="img" aria-label="Mãe sorrindo com o recém-nascido no colo"></div>
+</header>
+
+<section class="pain">
+  <div class="wrap narrow">
+    <span class="eyebrow">Você não está sozinha</span>
+    <h2>Muitas mães chegam aqui depois de pensar…</h2>
+    <div class="quotes">
+      <p class="quote">“Por que dói tanto se dizem que amamentar é natural?”</p>
+      <p class="quote">“Será que meu bebê está pegando o peito do jeito certo?”</p>
+      <p class="quote">“Meu peito empedrou e eu não sei o que fazer.”</p>
+      <p class="quote">“Cada pessoa me dá um conselho diferente.”</p>
+    </div>
+    <p class="turn">Na maioria das vezes, a dor e as feridas vêm da pega, e a pega se aprende.</p>
+    <p class="lede">Este curso mostra, em aulas curtas e práticas, o que observar no seu bebê e no seu corpo para amamentar com mais conforto, segurança e menos culpa.</p>
+  </div>
+</section>
+
+<section class="journey">
+  <div class="wrap narrow">
+    <span class="eyebrow">O que você vai aprender</span>
+    <h2>Os módulos acompanham o caminho que você vai viver</h2>
+    <ol class="timeline">
+      <li class="step"><span class="dot">1</span><div><span class="when">Antes de começar</span><h3>Comece aqui e boas-vindas</h3><p>Como aproveitar o curso e o que esperar dos primeiros dias.</p></div></li>
+      <li class="step"><span class="dot">2</span><div><span class="when">Conhecer o seu corpo</span><h3>Conhecendo sua mama</h3><p>Anatomia da mama, fases do leite e os tipos de mamilo, para você entender o seu corpo sem medo.</p></div></li>
+      <li class="step"><span class="dot">3</span><div><span class="when">A primeira mamada</span><h3>Pega correta na prática</h3><p>Demonstração visual de uma pega adequada e como corrigir quando algo não está certo.</p></div></li>
+      <li class="step"><span class="dot">4</span><div><span class="when">Para evitar problemas</span><h3>Os maiores erros</h3><p>O que costuma machucar o peito e atrapalhar a mamada, e como evitar.</p></div></li>
+      <li class="step"><span class="dot">5</span><div><span class="when">Se o peito machucar</span><h3>Mamilos feridos: o que fazer</h3><p>Prevenção de fissuras e os cuidados quando elas já apareceram.</p></div></li>
+      <li class="step"><span class="dot">6</span><div><span class="when">Quando o leite desce</span><h3>Apojadura: o que é e como cuidar</h3><p>Por que as mamas ficam cheias e doloridas e o que ajuda a aliviar.</p></div></li>
+      <li class="step"><span class="dot">7</span><div><span class="when">O dia a dia</span><h3>Rotina para uma amamentação saudável</h3><p>Como organizar a rotina e evitar a obstrução dos ductos.</p></div></li>
+      <li class="step"><span class="dot">8</span><div><span class="when">Para fechar</span><h3>Mensagem final: você não está sozinha</h3><p>Um recado de acolhimento para seguir com confiança.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="includes">
+  <div class="wrap inc-grid">
+    <img src="img/capa-guia.jpg" alt="Capa ilustrada do guia de apoio, com mãe amamentando em traço verde" width="480" height="720" loading="lazy">
+    <div>
+      <span class="eyebrow">Tudo o que está incluído</span>
+      <h2 style="margin-top:10px">Vídeo para entender, PDF para consultar</h2>
+      <ul>
+        <li><div><b>9 módulos em vídeo</b><span>Aulas curtas para assistir no celular, até no intervalo entre as mamadas.</span></div></li>
+        <li><div><b>Guia de apoio em PDF</b><span>Colostro, pega, benefícios do leite, desafios comuns e amamentação na volta ao trabalho, para consultar quando precisar.</span></div></li>
+        <li><div><b>Acesso imediato</b><span>Você recebe o login por e-mail logo após o pagamento.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="help">
+  <div class="wrap narrow">
+    <div class="card">
+      <span class="eyebrow">Dica de enfermeira</span>
+      <h2>Quando procurar ajuda profissional</h2>
+      <p class="lede">O curso ensina a prevenir e cuidar, mas alguns sinais pedem avaliação presencial. Procure seu médico, uma consultora de amamentação ou um banco de leite se perceber:</p>
+      <ul>
+        <li>Dor forte que não melhora depois de ajustar a pega</li>
+        <li>Feridas ou rachaduras que não cicatrizam</li>
+        <li>Mama vermelha, quente e endurecida, com febre ou mal-estar</li>
+        <li>Bebê que não ganha peso ou faz pouco xixi</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <div class="offer-card">
+      <div>
+        <span class="eyebrow">Amamentação com Leveza</span>
+        <h2 style="margin-top:8px">O que você recebe hoje</h2>
+        <ul class="receipt">
+          <li><span>Curso completo em vídeo (9 módulos)</span><span>incluso</span></li>
+          <li><span>Guia de apoio em PDF</span><span>incluso</span></li>
+          <li><span>Acesso pelo celular ou computador</span><span>incluso</span></li>
+        </ul>
+      </div>
+      <div class="stack" style="gap:18px">
+        <div class="price"><span class="big">R$ 37</span><span class="note">pagamento único</span></div>
+        <a class="cta" href="https://pay.kiwify.com.br/0LrTQhB" target="_blank" rel="noopener">Quero amamentar com mais conforto</a>
+        <div class="reassure"><span>Pix ou cartão</span><span>Acesso imediato por e-mail</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap guarantee">
+    <div class="seal" aria-hidden="true"><div><b>7</b><small>dias de<br>garantia</small></div></div>
+    <div>
+      <h2>Garantia de 7 dias</h2>
+      <p>Assista às aulas e leia o guia. Se em até 7 dias você sentir que o curso não é para você, peça o reembolso pela própria plataforma e devolvemos 100% do valor.</p>
+    </div>
+  </div>
+</section>
+
+<section class="author">
+  <div class="wrap author-grid">
+    <img src="img/foto2.jpg" alt="Mãe abraçando o recém-nascido no sofá" width="1000" height="562" loading="lazy">
+    <div class="stack">
+      <span class="eyebrow">Quem indica este curso</span>
+      <h2>Oi, eu sou a Enfermeira Regina</h2>
+      <p>Sou enfermeira e professora, e meu trabalho é ajudar mães de primeira viagem a cuidar do recém-nascido com segurança e confiança.</p>
+      <p>Escolhi este curso porque ele vai direto ao que mais faz falta nos primeiros dias: a pega correta e os cuidados com as mamas, explicados de forma simples e acolhedora.</p>
+      <p>Fale comigo no Instagram: <a href="https://www.instagram.com/protocolorn/" target="_blank" rel="noopener">@protocolorn</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-list">
+      <details><summary>Posso fazer o curso ainda na gestação?</summary><p>Pode, e é o ideal. Chegar ao parto sabendo como é uma boa pega deixa os primeiros dias muito mais tranquilos.</p></details>
+      <details><summary>Já estou amamentando e sinto dor. O curso ajuda?</summary><p>Sim. Os módulos de pega correta, maiores erros e mamilos feridos mostram como ajustar a mamada. Se a dor continuar forte depois dos ajustes, procure avaliação presencial.</p></details>
+      <details><summary>Quanto tempo tenho de acesso?</summary><p>O acesso é pela área de membros da Kiwify, e você assiste no seu ritmo, pelo celular ou pelo computador.</p></details>
+      <details><summary>Como recebo o curso?</summary><p>Logo após a confirmação do pagamento, chega no seu e-mail o acesso à área de membros, com os vídeos e o guia em PDF.</p></details>
+      <details><summary>O curso substitui a consulta com um profissional?</summary><p>Não. É um material educativo de apoio. Em caso de febre, mama vermelha e endurecida, feridas que não melhoram ou dúvidas sobre o ganho de peso do bebê, procure atendimento.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>Que a amamentação seja um momento de vínculo, e não de dor</h2>
+    <p>Comece hoje, no seu tempo, com aulas curtas e um guia para consultar sempre que precisar.</p>
+    <a class="cta" href="https://pay.kiwify.com.br/0LrTQhB" target="_blank" rel="noopener">Quero o curso por R$ 37</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Amamentação com Leveza · Enfermeira Regina</p>
+    <p>Material educativo. Não substitui consulta ou orientação de profissionais de saúde.</p>
+    <p>Pagamento processado com segurança pela Kiwify.</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <div class="p">R$ 37<small>curso + guia em PDF</small></div>
+  <a class="cta" href="https://pay.kiwify.com.br/0LrTQhB" target="_blank" rel="noopener">Quero o curso</a>
+</div>
+
+</body>
+</html>
