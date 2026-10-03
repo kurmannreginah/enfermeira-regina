@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Amamentação com Leveza</title>
-<meta name="description" content="Curso em vídeo sobre pega correta, cuidados com as mamas, apojadura e rotina de amamentação, com guia de apoio em PDF. Por R$ 37.">
+<meta name="description" content="Curso em vídeo sobre pega correta, cuidados com as mamas, apojadura e rotina de amamentação, com guia de apoio em PDF e o app Mamãe Nutre de bônus. Por R$ 67.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
@@ -98,9 +98,9 @@ section { padding-block: clamp(52px, 7vw, 92px); }
 
 /* includes */
 .includes { background: var(--paper); }
-.inc-grid { display: grid; gap: 22px; align-items: center; }
-@media (min-width: 820px) { .inc-grid { grid-template-columns: 300px 1fr; gap: 48px; } }
-.inc-grid img { border-radius: 14px; box-shadow: 0 14px 40px rgba(47,58,54,.14); justify-self: center; max-width: 280px; }
+.inc-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; align-items: center; }
+@media (min-width: 820px) { .inc-grid { grid-template-columns: 440px 1fr; gap: 48px; } }
+.inc-grid img { border-radius: 14px; box-shadow: 0 14px 40px rgba(47,58,54,.14); justify-self: center; width: 100%; max-width: 440px; }
 .includes h2 { font-size: var(--step-2); }
 .includes ul { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 12px; }
 .includes li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; }
@@ -130,6 +130,20 @@ section { padding-block: clamp(52px, 7vw, 92px); }
 .price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .price .big { font-family: var(--display); font-weight: 700; font-size: clamp(3rem, 2.3rem + 3.6vw, 4.4rem); line-height: 1; font-variant-numeric: tabular-nums; }
 .price .note { color: var(--ink-soft); font-weight: 700; }
+
+/* bonus */
+.bonus-tag { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--paper); border: 2px solid var(--peach); border-radius: 18px; padding: 12px 16px; font-size: .97rem; color: var(--ink); margin: 0; }
+.bonus-tag img { height: 26px; width: auto; }
+.bonus { background: #fbf1ea; }
+.bonus-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: center; }
+@media (min-width: 860px) { .bonus-grid { grid-template-columns: 1.1fr .9fr; } }
+.bonus h2 { font-size: var(--step-2); color: #7a3322; }
+.bonus .eyebrow { color: #b8664c; }
+.bonus-list { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 10px; }
+.bonus-list li { background: var(--paper); border-radius: 14px; padding: 12px 16px; color: var(--ink-soft); }
+.bonus-list li b { color: var(--ink); }
+.bonus img { justify-self: center; max-width: min(440px, 100%); }
+.note { font-size: .92rem; color: var(--ink-soft); }
 
 /* guarantee + author */
 .guarantee { display: grid; gap: 22px; align-items: center; }
@@ -190,9 +204,10 @@ footer .wrap { display: grid; gap: 8px; text-align: center; }
       <span class="eyebrow">Curso em vídeo · Amamentação</span>
       <h1>Amamentação <em>com leveza</em>, desde a primeira mamada</h1>
       <p class="lede">Aprenda a pega correta, como cuidar das mamas, o que fazer na apojadura e como montar uma rotina que funcione para você e seu bebê.</p>
+      <p class="bonus-tag"><img src="img/logo.png" alt="" width="270" height="40"><span><b>🎁 Bônus incluso:</b> o app Mamãe Nutre, com 14 protocolos, receitas e chás para apoiar a sua produção de leite.</span></p>
       <div class="stack" style="gap:12px">
-        <a class="cta" href="https://pay.kiwify.com.br/0LrTQhB" target="_blank" rel="noopener">Quero o curso por R$ 37</a>
-        <div class="reassure"><span>Aulas curtas em vídeo</span><span>Guia de apoio em PDF</span><span>Garantia de 7 dias</span></div>
+        <a class="cta" href="https://pay.kiwify.com.br/0LrTQhB" target="_blank" rel="noopener">Quero o curso + app por R$ 67</a>
+        <div class="reassure"><span>Aulas curtas em vídeo</span><span>App de bônus</span><span>Garantia de 7 dias</span></div>
       </div>
       <p class="byline">Curso selecionado e acompanhado pela <b>Enfermeira Regina</b>, enfermeira e professora, que ajuda mães de primeira viagem a cuidar do recém-nascido com segurança.</p>
     </div>
@@ -234,16 +249,36 @@ footer .wrap { display: grid; gap: 8px; text-align: center; }
 
 <section class="includes">
   <div class="wrap inc-grid">
-    <img src="img/capa-guia.jpg" alt="Capa ilustrada do guia de apoio, com mãe amamentando em traço verde" width="480" height="720" loading="lazy">
+    <img src="img/curso-app.jpg" alt="Curso Amamentação com Leveza com o app Mamãe Nutre de bônus" width="900" height="630" loading="lazy">
     <div>
       <span class="eyebrow">Tudo o que está incluído</span>
       <h2 style="margin-top:10px">Vídeo para entender, PDF para consultar</h2>
       <ul>
         <li><div><b>9 módulos em vídeo</b><span>Aulas curtas para assistir no celular, até no intervalo entre as mamadas.</span></div></li>
         <li><div><b>Guia de apoio em PDF</b><span>Colostro, pega, benefícios do leite, desafios comuns e amamentação na volta ao trabalho, para consultar quando precisar.</span></div></li>
+        <li><div><b>Bônus: app Mamãe Nutre</b><span>Protocolos, receitas e chás no seu celular para apoiar a produção de leite.</span></div></li>
         <li><div><b>Acesso imediato</b><span>Você recebe o login por e-mail logo após o pagamento.</span></div></li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section class="bonus">
+  <div class="wrap bonus-grid">
+    <div class="stack">
+      <span class="eyebrow">🎁 Seu bônus</span>
+      <h2>App Mamãe Nutre: o protocolo certo para cada momento</h2>
+      <p class="lede">O curso ensina a pega e os cuidados com as mamas. O app completa o caminho com protocolos passo a passo para apoiar a sua produção de leite, e abre no navegador do celular, sem instalar nada.</p>
+      <ul class="bonus-list">
+        <li><b>14 protocolos</b> para situações como primeiros dias, queda de produção, estresse, cansaço, madrugada e estoque de leite</li>
+        <li><b>3 receitas práticas</b> com ingredientes de mercado</li>
+        <li><b>3 chás</b> com modo de preparo e melhor horário</li>
+        <li><b>Rotina diária completa</b> para seguir sem precisar pensar</li>
+        <li><b>2 vídeos</b> de boas-vindas e de como salvar o app no celular</li>
+      </ul>
+      <p class="note">Vendido separadamente por R$ 47. Aqui ele vem de presente com o curso.</p>
+    </div>
+    <img src="img/receitas.png" alt="Tela de receitas do app Mamãe Nutre no celular" width="560" height="566" loading="lazy">
   </div>
 </section>
 
@@ -273,10 +308,11 @@ footer .wrap { display: grid; gap: 8px; text-align: center; }
           <li><span>Curso completo em vídeo (9 módulos)</span><span>incluso</span></li>
           <li><span>Guia de apoio em PDF</span><span>incluso</span></li>
           <li><span>Acesso pelo celular ou computador</span><span>incluso</span></li>
+          <li><span>🎁 Bônus: app Mamãe Nutre (14 protocolos, receitas e chás)</span><span>presente</span></li>
         </ul>
       </div>
       <div class="stack" style="gap:18px">
-        <div class="price"><span class="big">R$ 37</span><span class="note">pagamento único</span></div>
+        <div class="price"><span class="big">R$ 67</span><span class="note">pagamento único</span></div>
         <a class="cta" href="https://pay.kiwify.com.br/0LrTQhB" target="_blank" rel="noopener">Quero amamentar com mais conforto</a>
         <div class="reassure"><span>Pix ou cartão</span><span>Acesso imediato por e-mail</span></div>
       </div>
@@ -315,6 +351,7 @@ footer .wrap { display: grid; gap: 8px; text-align: center; }
       <details><summary>Já estou amamentando e sinto dor. O curso ajuda?</summary><p>Sim. Os módulos de pega correta, maiores erros e mamilos feridos mostram como ajustar a mamada. Se a dor continuar forte depois dos ajustes, procure avaliação presencial.</p></details>
       <details><summary>Quanto tempo tenho de acesso?</summary><p>O acesso é pela área de membros da Kiwify, e você assiste no seu ritmo, pelo celular ou pelo computador.</p></details>
       <details><summary>Como recebo o curso?</summary><p>Logo após a confirmação do pagamento, chega no seu e-mail o acesso à área de membros, com os vídeos e o guia em PDF.</p></details>
+      <details><summary>Como funciona o app Mamãe Nutre?</summary><p>É um app que abre no navegador do celular, sem instalar nada. O link fica na área de membros, junto com um vídeo que mostra como salvá-lo na tela inicial. Antes de usar os chás, confirme com seu médico se são seguros para você.</p></details>
       <details><summary>O curso substitui a consulta com um profissional?</summary><p>Não. É um material educativo de apoio. Em caso de febre, mama vermelha e endurecida, feridas que não melhoram ou dúvidas sobre o ganho de peso do bebê, procure atendimento.</p></details>
     </div>
   </div>
@@ -323,8 +360,8 @@ footer .wrap { display: grid; gap: 8px; text-align: center; }
 <section class="closing">
   <div class="wrap">
     <h2>Que a amamentação seja um momento de vínculo, e não de dor</h2>
-    <p>Comece hoje, no seu tempo, com aulas curtas e um guia para consultar sempre que precisar.</p>
-    <a class="cta" href="https://pay.kiwify.com.br/0LrTQhB" target="_blank" rel="noopener">Quero o curso por R$ 37</a>
+    <p>Comece hoje, no seu tempo, com aulas curtas, um guia para consultar sempre que precisar e o app Mamãe Nutre de presente.</p>
+    <a class="cta" href="https://pay.kiwify.com.br/0LrTQhB" target="_blank" rel="noopener">Quero o curso + app por R$ 67</a>
   </div>
 </section>
 
@@ -337,7 +374,7 @@ footer .wrap { display: grid; gap: 8px; text-align: center; }
 </footer>
 
 <div class="bar">
-  <div class="p">R$ 37<small>curso + guia em PDF</small></div>
+  <div class="p">R$ 67<small>curso + app de bônus</small></div>
   <a class="cta" href="https://pay.kiwify.com.br/0LrTQhB" target="_blank" rel="noopener">Quero o curso</a>
 </div>
 
