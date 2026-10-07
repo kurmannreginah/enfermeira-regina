@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pequenos Aprendizes · Inglês para crianças</title>
+<meta name="description" content="App de inglês para crianças de 2 a 8 anos: 12 categorias, áudio com a pronúncia de cada palavra e atividade de completar. R$ 37, acesso imediato.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--roxo:#7a12d6;--roxo2:#a943f5;--rosa:#e2399b;--tinta:#3b1a66;--suave:#6b4b94;--azul:#b9e6fd;--rosac:#f9cfe6;--amar:#fff1a8;--branco:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Nunito',system-ui,sans-serif;color:var(--tinta);background:#fffaf4;line-height:1.5;font-size:18px}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Baloo 2',system-ui,sans-serif;line-height:1.05;margin:0;color:var(--roxo)}
+h1{font-size:clamp(40px,7vw,68px)}h2{font-size:clamp(32px,5vw,46px)}h3{font-size:26px}
+.btn{display:inline-block;background:linear-gradient(90deg,#e66cf0,var(--roxo2));color:#fff;text-decoration:none;font-family:'Baloo 2';font-weight:800;font-size:24px;padding:16px 34px;border-radius:999px;box-shadow:0 12px 24px rgba(122,18,214,.28)}
+.btn:hover{filter:brightness(1.06)}
+.eyebrow{font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:14px;color:var(--roxo2)}
+section{padding:72px 0}
+.hero{background:linear-gradient(180deg,var(--azul),var(--rosac) 60%,var(--amar));padding:56px 0 80px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center}
+.hero p.sub{font-size:21px;font-weight:700;color:var(--suave);margin:18px 0 26px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{background:#fff;border-radius:999px;padding:8px 16px;font-weight:800;font-size:15px;color:var(--roxo)}
+.phones{display:flex;justify-content:center;gap:16px}
+.phone{border:10px solid #1f1530;border-radius:40px;overflow:hidden;background:#fff;box-shadow:0 24px 48px rgba(0,0,0,.2);width:200px}
+.phone:nth-child(1){transform:rotate(-6deg) translateY(20px)}.phone:nth-child(3){transform:rotate(6deg) translateY(20px)}
+.dor{background:#fff}
+.dor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:30px}
+.card{background:#fff6fb;border:3px solid #f6dcec;border-radius:26px;padding:24px;font-weight:700}
+.how{background:linear-gradient(180deg,#f4ecff,#fff)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+.step{background:#fff;border-radius:26px;padding:26px;box-shadow:0 10px 24px rgba(122,18,214,.08)}
+.step b{display:block;font-family:'Baloo 2';font-size:44px;color:var(--rosa);line-height:1}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:28px}
+.cat{background:#fff;border-radius:20px;padding:16px;text-align:center;font-weight:900;color:var(--roxo);border:3px solid #eadcff}
+.cat span{display:block;font-size:34px}
+.gal{display:flex;gap:16px;overflow-x:auto;padding:10px 4px 20px;margin-top:26px}
+.gal .phone{flex:0 0 190px;transform:none}
+.offer{background:linear-gradient(180deg,var(--amar),#fff)}
+.box{max-width:560px;margin:30px auto 0;background:#fff;border-radius:32px;padding:34px;box-shadow:0 20px 40px rgba(122,18,214,.14);text-align:center}
+.box ul{list-style:none;padding:0;margin:0 0 20px;text-align:left}
+.box li{padding:10px 0;border-bottom:2px dashed #eee;font-weight:800}
+.price{font-family:'Baloo 2';font-size:72px;color:var(--roxo);line-height:1;margin:12px 0 4px}
+.small{font-size:15px;color:var(--suave);font-weight:700}
+.guar{display:flex;gap:20px;align-items:center;max-width:720px;margin:0 auto;background:#fff;border-radius:28px;padding:26px;border:3px solid #eadcff}
+.seal{flex:0 0 96px;height:96px;border-radius:50%;background:var(--roxo);color:#fff;display:grid;place-items:center;text-align:center;font-family:'Baloo 2';font-weight:800;line-height:1;font-size:15px}
+.seal b{font-size:38px;display:block}
+.faq details{background:#fff;border-radius:20px;padding:18px 22px;margin-top:12px;border:2px solid #eadcff}
+.faq summary{font-weight:900;cursor:pointer;color:var(--roxo)}
+footer{padding:40px 0 110px;text-align:center;font-size:14px;color:var(--suave)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;box-shadow:0 -6px 20px rgba(0,0,0,.08);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:9}
+.bar .btn{font-size:19px;padding:12px 22px}
+@media (max-width:760px){.hero-grid{grid-template-columns:minmax(0,1fr)}.phone{width:150px;border-width:8px;border-radius:30px}.guar{flex-direction:column;text-align:center}section{padding:56px 0}}
+</style>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','192744874953400');fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'Pequenos Aprendizes',value:37,currency:'BRL'});
+document.addEventListener('click',function(e){var a=e.target.closest('a[href*="pay.kiwify.com.br"]');if(a)fbq('track','InitiateCheckout',{content_name:'Pequenos Aprendizes',value:37,currency:'BRL'});});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=192744874953400&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+
+<header class="hero"><div class="wrap hero-grid">
+<div>
+<span class="eyebrow">App de inglês para crianças de 2 a 8 anos</span>
+<h1 style="margin-top:12px">Tempo de tela que <span style="color:var(--rosa)">ensina</span> inglês brincando</h1>
+<p class="sub">Imagem, áudio com a pronúncia de cada palavra e tradução em português. Seu filho toca, ouve, repete e aprende, mesmo que você não fale inglês.</p>
+<a class="btn" href="https://pay.kiwify.com.br/gCKcvON">Quero o app por R$ 37</a>
+<div class="chips"><span class="chip">🎓 12 categorias</span><span class="chip">🔊 Áudio em inglês</span><span class="chip">✏️ Atividade</span><span class="chip">📱 Sem instalar nada</span></div>
+</div>
+<div class="phones"><div class="phone"><img src="img/home.jpg" alt="Tela inicial do app com as categorias"></div><div class="phone"><img src="img/animals.jpg" alt="Tela da palavra Dog com botão para ouvir"></div><div class="phone"><img src="img/practice.jpg" alt="Tela da atividade Complete a Palavra"></div></div>
+</div></header>
+
+<section class="dor"><div class="wrap">
+<span class="eyebrow">Você se identifica?</span>
+<h2 style="margin-top:10px">Muitas famílias querem dar inglês aos filhos, mas…</h2>
+<div class="dor-grid">
+<div class="card">📺 O celular vira vídeo atrás de vídeo, e bate a culpa.</div>
+<div class="card">💸 Escolinha de idiomas pesa no orçamento todo mês.</div>
+<div class="card">🤔 Você não fala inglês e não sabe por onde começar.</div>
+<div class="card">⏰ A rotina é corrida e falta tempo para levar e buscar.</div>
+</div>
+<p style="font-size:20px;font-weight:800;margin-top:28px">Crianças pequenas aprendem palavras novas brincando, ouvindo e repetindo. Poucos minutos por dia, com imagem e som, já viram rotina.</p>
+</div></section>
+
+<section class="how"><div class="wrap">
+<span class="eyebrow">Como funciona</span>
+<h2 style="margin-top:10px">Simples para a criança, fácil para você</h2>
+<div class="steps">
+<div class="step"><b>1</b><h3>Escolhe</h3><p>A criança escolhe uma categoria: animais, cores, frutas…</p></div>
+<div class="step"><b>2</b><h3>Ouve</h3><p>Toca na figura e ouve a palavra em inglês, com a tradução embaixo.</p></div>
+<div class="step"><b>3</b><h3>Pratica</h3><p>Na atividade "Complete a Palavra", fixa o que aprendeu e ganha estrelinhas.</p></div>
+</div>
+<div class="cats">
+<div class="cat"><span>🐶</span>Animais</div><div class="cat"><span>🎨</span>Cores</div><div class="cat"><span>🔢</span>Números</div><div class="cat"><span>🍎</span>Frutas</div><div class="cat"><span>👀</span>Corpo</div><div class="cat"><span>👨‍👩‍👧</span>Família</div><div class="cat"><span>🚗</span>Transporte</div><div class="cat"><span>🏠</span>Casa</div><div class="cat"><span>🏫</span>Escola</div><div class="cat"><span>🧸</span>Brinquedos</div><div class="cat"><span>👕</span>Roupas</div><div class="cat"><span>🔤</span>Alfabeto</div>
+</div>
+<div class="gal"><div class="phone"><img src="img/animals.jpg" alt="Palavra Dog"></div><div class="phone"><img src="img/fruits.jpg" alt="Palavra Apple"></div><div class="phone"><img src="img/colors.jpg" alt="Cores"></div><div class="phone"><img src="img/practice.jpg" alt="Atividade"></div><div class="phone"><img src="img/home.jpg" alt="Início"></div></div>
+<p style="font-weight:800">Colorido, sem anúncios e sem conteúdo estranho aparecendo. Funciona no celular, tablet ou computador, direto no navegador.</p>
+</div></section>
+
+<section class="offer"><div class="wrap">
+<div style="text-align:center"><span class="eyebrow">O que você recebe</span><h2 style="margin-top:10px">Pequenos Aprendizes</h2></div>
+<div class="box">
+<ul>
+<li>📱 App completo com 12 categorias</li>
+<li>🔊 Áudio com a pronúncia de cada palavra</li>
+<li>🇧🇷 Tradução em português</li>
+<li>✏️ Atividade "Complete a Palavra"</li>
+<li>⭐ Estrelinhas que motivam a criança a voltar</li>
+<li>⚡ Acesso imediato por e-mail</li>
+</ul>
+<div class="small">pagamento único</div>
+<div class="price">R$ 37</div>
+<div class="small" style="margin-bottom:20px">Pix ou cartão · menos que uma mensalidade de escolinha</div>
+<a class="btn" href="https://pay.kiwify.com.br/gCKcvON">Quero o app agora</a>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="guar"><div class="seal"><span><b>7</b>dias de<br>garantia</span></div><div><h3>Garantia de 7 dias</h3><p style="margin:6px 0 0">Teste com seu filho. Se em até 7 dias sentir que não é para vocês, peça o reembolso pela própria Kiwify e recebe 100% do valor.</p></div></div>
+</div></section>
+
+<section class="faq" style="padding-top:0"><div class="wrap">
+<h2>Perguntas frequentes</h2>
+<details><summary>Para qual idade é indicado?</summary><p>Para crianças de 2 a 8 anos. Os menores aproveitam melhor com um adulto junto no começo.</p></details>
+<details><summary>Preciso saber inglês?</summary><p>Não. O próprio app fala a pronúncia de cada palavra e mostra a tradução em português.</p></details>
+<details><summary>Precisa instalar?</summary><p>Não. O app abre no navegador do celular, tablet ou computador. Você pode salvar na tela inicial como um atalho.</p></details>
+<details><summary>Como recebo?</summary><p>Logo após o pagamento, chega no seu e-mail o acesso à área de membros, com o link do app e as instruções.</p></details>
+<details><summary>Quanto tempo por dia?</summary><p>Uns 10 minutinhos já bastam. O importante é a constância e a brincadeira, sem pressão.</p></details>
+</div></section>
+
+<footer><div class="wrap">Pequenos Aprendizes · indicado pela Enfermeira Regina · @enfermeirareginarn<br>Pagamento processado com segurança pela Kiwify.</div></footer>
+<div class="bar"><div><b style="font-family:'Baloo 2';font-size:26px;color:var(--roxo)">R$ 37</b><div class="small">acesso imediato</div></div><a class="btn" href="https://pay.kiwify.com.br/gCKcvON">Quero o app</a></div>
+</body></html>
